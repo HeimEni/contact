@@ -9,12 +9,16 @@ public class Adresse {
     private int cp;
 
     public Adresse(long id, String street, int nbStreet, String city, String state, int cp) {
+        this(id,street,nbStreet,city);
+        this.State = state;
+        this.cp = cp;
+    }
+
+    public Adresse(long id, String street, int nbStreet, String city) {
         this.id = id;
         this.street = street;
         this.nbStreet = nbStreet;
         this.city = city;
-        this.State = state;
-        this.cp = cp;
     }
 
     public long getId() {

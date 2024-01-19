@@ -9,13 +9,28 @@ public class Contact {
     private Adresse adresse;
 
     public Contact(long id, String firstName, String lastName, String nbTelephone, String email, Adresse adresse) {
+        this(id,firstName,lastName,nbTelephone);
+        this.adresse = adresse;
+    }
+
+    public Contact(long id, String firstName, String lastName, String nbTelephone, String email) {
+        this(id,firstName,lastName,nbTelephone);
+        this.email = email;
+    }
+
+    public Contact(long id, String firstName, String lastName, String nbTelephone) {
+        this(id,firstName,lastName);
+        this.nbTelephone = nbTelephone;
+    }
+
+    public Contact(long id, String firstName, String lastName) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.nbTelephone = nbTelephone;
-        this.email = email;
-        this.adresse = adresse;
     }
+    public Contact() {
+    }
+
 
     public long getId() {
         return id;
