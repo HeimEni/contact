@@ -68,4 +68,17 @@ public class Adresse {
     public void setCp(int cp) {
         this.cp = cp;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Adresse{");
+        sb.append("id=").append(id);
+        sb.append(", street='").append(street).append('\'');
+        sb.append(", nbStreet=").append(nbStreet);
+        sb.append(", city='").append(city).append('\'');
+        sb.append(", State='").append(State).append('\'');
+        sb.append(", cp=").append(cp);
+        sb.append('}');
+        return sb.toString();
+    }
 }

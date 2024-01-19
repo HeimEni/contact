@@ -79,4 +79,17 @@ public class Contact {
     public void setAdresse(Adresse adresse) {
         this.adresse = adresse;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Contact{");
+        sb.append("id=").append(id);
+        sb.append(", firstName='").append(firstName).append('\'');
+        sb.append(", lastName='").append(lastName).append('\'');
+        sb.append(", nbTelephone='").append(nbTelephone).append('\'');
+        sb.append(", email='").append(email).append('\'');
+        sb.append(", adresse=").append(adresse);
+        sb.append('}');
+        return sb.toString();
+    }
 }
